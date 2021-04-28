@@ -42,6 +42,17 @@ GENERATED_BODY() public:
 		static void  LoadTxtHamza(int32 & x_coordinate, int32 & y_coordinate, int32 & z_coordinate);
 
 	UFUNCTION(BlueprintCallable, Category = "Custom", meta = (Keywords = "CalculateAngles"))
-		static bool  CalculateAngles(int32 x_coordinate, int32 y_coordinate, int32  z_coordinate,int32 & o1_Angle, int32 & o2_Angle, 
+		static bool  CalculateAngles(float x, float y, int32  z_coordinate,float & o1_Angle, float & o2_Angle, 
 			int32 &  z_coord);
+
+	UFUNCTION(BlueprintCallable, Category = "Custom", meta = (Keywords = "ConvertAngles"))
+		static bool  ConvertAngles(float O1_entree, float O2_entree, float& o1_Sortie, float& o2_Sortie);
+
+
+	/*bool constraint1(float O1, float O2);
+	bool constraint2(float O1, float O2);
+	bool interdroite(float x1, float y1, float l1, float x2, float y2, float l2, float O1, float O2);
+	bool appart(float x1, float x11, float xi);
+	void calcul_xy(float  O1, float O2);*/
+
 };
